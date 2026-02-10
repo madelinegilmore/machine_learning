@@ -9,7 +9,7 @@ Original file is located at
 
 import pandas as pd
 
-df = pd.read_csv('/content/Network_Intrusion_Dataset(1).csv')
+df = pd.read_csv('intrusion_detection/Network_Intrusion_Dataset(1).csv')
 
 # familiarize with table
 df.head()
@@ -142,7 +142,10 @@ knn = KNeighborsClassifier()
 param_grid = {'n_neighbors': np.arange(1, 25), 'metric': ['euclidean', 'manhattan']}
 #use gridsearch to test all values for n_neighbors
 knn_gscv = GridSearchCV(knn, param_grid, cv=5, scoring = 'roc_auc') # you can look for the best of any metric (true positive, error, etc)
-#fit model to data - lowk we trained it on the test data bc its included here yikes
+
+
+#fit model to data - we actually trained it on the test data bc it was included in the test set earlier - oops!
+
 knn_gscv.fit(X, y)
 
 knn_gscv.best_params_
