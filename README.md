@@ -1,2 +1,2 @@
 # machine_learning
-Machine learning coursework and projects
+This repository contains a collection of my machine learning coursework and projects, developed as part of my academic studies and independent exploration of machine learning concepts.
